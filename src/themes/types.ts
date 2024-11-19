@@ -1,3 +1,4 @@
+// types.ts
 export interface ITheme {
   colors: {
     primary: string;
@@ -5,9 +6,13 @@ export interface ITheme {
     background: string;
     text: string;
     button: {
-      background: string;
-      text: string;
-      hover: string;
+      [key: string]: {
+        background: string;
+        text: string;
+        hover: string;
+        disabled: string;
+        border?: string;
+      };
     };
     postIt: {
       background: string;
