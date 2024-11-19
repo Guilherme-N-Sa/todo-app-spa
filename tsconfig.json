@@ -14,7 +14,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "src",
+    // following aliases is not working, need to use craco.config.js to enable aliases
+    "paths": {
+      "@/*": ["*"],
+      "@components/*": ["components/*"],
+      "@themes/*": ["themes/*"]
+    }
   },
   "include": ["src"]
 }
